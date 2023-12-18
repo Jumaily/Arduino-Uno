@@ -1,6 +1,5 @@
 //\\ Taha Al-jumaily //\\
 
-#include <LiquidCrystal_I2C.h>
 #include <dht_nonblocking.h>
 #include <LiquidCrystal.h>
 #define DHT_SENSOR_TYPE DHT_TYPE_11
@@ -63,7 +62,7 @@ void loop( ){
     lcd.print("%");
 
     lcd.setCursor(0,1);
-    lcd.print("Temp: ");
+    lcd.print("Temperature: ");
     lcd.print(Fahrenheit);
     lcd.print(" F");
     }
