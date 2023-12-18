@@ -15,7 +15,7 @@ void setup( ){
   Serial.begin( 9600);
 
   // Initialize LCD
-  lcd.begin(16,2);
+  lcd.begin(16,1);
   }
 
 
@@ -62,7 +62,7 @@ void loop( ){
     lcd.print("%");
 
     lcd.setCursor(0,1);
-    lcd.print("Temperature: ");
+    lcd.print("Temp: ");
     lcd.print(Fahrenheit);
     lcd.print(" F");
     }
