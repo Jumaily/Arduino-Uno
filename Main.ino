@@ -15,7 +15,7 @@ void setup( ){
   Serial.begin( 9600);
 
   // Initialize LCD
-  lcd.begin(16,1);
+  lcd.begin(16,2);
   }
 
 
@@ -26,7 +26,7 @@ void setup( ){
 static bool measure_environment( float *temperature, float *humidity ){
   static unsigned long measurement_timestamp = millis( );
   /* Measure once every four seconds. */
-  if( millis( ) - measurement_timestamp > 2000ul ){
+  if( millis( ) - measurement_timestamp > 12000ul ){
     if( dht_sensor.measure( temperature, humidity ) == true ){
       measurement_timestamp = millis( );
       return( true );
